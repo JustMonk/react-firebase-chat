@@ -1,0 +1,225 @@
+@import (css) "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+
+.chat-board {
+   width: 120vh;
+   height: 85vh;
+   background: #3a3d44; /*#484848*/ 
+   border-radius: 4vh;
+   box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+   display: flex;
+}
+
+.user-info {
+   color: #fff;
+   width: 25vh;
+   min-width: 25vh;
+   order: 1;
+}
+
+/*for test*/
+.user-info h2 {
+   font-weight: 100;
+}
+
+.chat-wrapper {
+   background: #eceff1;
+   border-radius: 4vh;
+   display: flex;
+   flex-grow: 2;
+   order: 2;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.chat-wrapper h1 {
+   padding: 3vh;
+   margin: 0;
+   font-weight: 400;
+   font-size: 3.4vh;
+}
+
+.chat-window {
+   background:  #e3e6ea; /*#e8eaed*/
+   border-radius: 4vh;
+   height: 100%;
+   max-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+.message-list {
+   order: 1;
+   flex-grow: 3;
+   outline: 1px orange;
+   padding: 3vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+
+.message {
+   margin: 1vh 0;
+   max-width: 80%;
+}
+.self-message {
+   margin: 1vh 0;
+    /* max-width: 81%; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-end;
+}
+.self-message .text {
+   background: #fff;
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+   display: inline-block;
+   padding: 2vh;
+   border-radius: 1vh;
+   max-width: 80%;
+   font-size: 1.6vh;
+}
+.self-message .message-name {
+   text-align: right;
+}
+
+.self-message .message-content {
+   display: flex;
+   flex-direction: column;
+}
+.self-message .text-wrapper {
+   display: flex;
+   justify-content: flex-end;
+}
+.self-message .message-date {
+   color: #7b7b7b;
+}
+
+.message-date {
+   text-align: right;
+   color: #d2d2d2;
+   font-size: 1vh;
+   margin-top: 0.5vh;
+}
+
+.message-name {
+   font-weight: 100;
+   font-size: 2vh;
+   margin: 0.5vh 0;
+}
+
+.message .text {
+   display: inline-block;
+   background: #039be5;
+   color: #fff;
+   padding: 2vh;
+   border-radius: 1vh;
+   font-size: 1.6vh;
+}
+
+.message-input {
+   order: 2;
+   padding: 1vh 3vh;
+   /*exp*/
+   background: #fff;
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+   display: flex;
+   align-items: center;
+   z-index: 10;
+}
+.message-input input {
+   flex-grow: 3;
+   padding: 1.5vh 0;
+   border: none;
+   outline: none;
+   font-size: 1.6vh;
+}
+.message-input button {
+   border: none;
+   outline: none;
+   background: transparent;
+   font-size: 2.5vh;
+   cursor: pointer;
+   color: #6fa1d4;
+}
+
+/*user info + room*/
+.user-avatar {
+   display: flex;
+   justify-content: center;
+   padding: 2.5vh 0;
+}
+.user-avatar img {
+   width: 7vh;
+   height: 7vh;
+   border-radius: 200px;
+}
+
+.info-header {
+   padding: 3vh;
+}
+
+.info-header h1 {
+   margin: 0;
+   font-weight: 400;
+   font-size: 3.4vh;
+}
+.login {
+   text-align: center;
+   font-weight: 400;
+   color: #6994c1;
+   font-size: 1.7vh;
+}
+.nickname {
+   text-align: center;
+   font-weight: 100;
+   font-size: 1.7vh;
+}
+
+.chat-menu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.chat-menu a {
+   text-decoration: none;
+   color: #fff;
+   display: block;
+   padding: 1.5vh 2vh;
+   font-size: 1.7vh;
+}
+.chat-menu .title {
+   margin: 1vh 0;
+   padding: 0 2vh;
+   color: #b9b9b9;
+   font-size: 1.5vh;
+}
+
+.user-menu ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   margin-bottom: 2vh;
+}
+.user-menu a{
+   background: linear-gradient(90deg,rgba(114, 119, 123, 0.36),rgba(0,0,0,0));
+   text-decoration: none;
+   color: #fff;
+   display: block;
+   padding: 1.5vh 2vh;
+   font-size: 1.7vh;
+}
+
+.current {
+   background: linear-gradient(90deg,rgba(49, 144, 226, 0.36),rgba(0,0,0,0));
+   position: relative;
+}
+.current a:before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 5px;
+   height: 100%;
+   background: #039be5;
+   border-radius: 0 4px 4px 0;
+}

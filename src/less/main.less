@@ -1,0 +1,21 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+@background : #e4e4e6;
+@accent: #ac8fc7;
+
+body {
+   font-family: 'Segoe UI';
+   background: @background;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+}
+
+@import "modules/login-form.less";
+@import "modules/chat-board.less";
